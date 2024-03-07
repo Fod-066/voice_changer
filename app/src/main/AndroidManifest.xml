@@ -22,10 +22,14 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.voice.monster.pages.home.HomePage"
+        <activity
+            android:name="com.voice.monster.pages.home.HomePage"
             android:exported="true"
-            android:screenOrientation="portrait"
-            />
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.voice.monster.pages.setting.SettingPage"
+            android:exported="true"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
