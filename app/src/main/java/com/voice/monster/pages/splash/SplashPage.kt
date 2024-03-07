@@ -2,11 +2,13 @@ package com.voice.monster.pages.splash
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.core.animation.addListener
 import com.voice.monster.databinding.SplashPageBinding
 import com.voice.monster.pages.BasePage
+import com.voice.monster.pages.home.HomePage
 
 class SplashPage : BasePage<SplashPageBinding>() {
 
@@ -19,7 +21,8 @@ class SplashPage : BasePage<SplashPageBinding>() {
     animatorSet.playTogether(alphaAnimator, alphaAnimator2)
     animatorSet.duration = 3000L
     animatorSet.addListener(onEnd = {
-
+      startActivity(Intent(this, HomePage::class.java))
+      finish()
     })
     animatorSet.start()
   }

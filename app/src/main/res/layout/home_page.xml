@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@mipmap/home_bg"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/h_50_gl"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/v_32_gl"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.32"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/v_46_gl"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.46"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/v_50_gl"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/v_65_gl"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.65"
+        />
+    
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:padding="12dp"
+        android:src="@mipmap/setting"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="24dp"
+        android:id="@+id/setting_iv"
+        />
+    
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="163dp"
+        android:layout_height="86dp"
+        android:src="@mipmap/home_text"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/v_32_gl"
+        android:layout_marginBottom="56dp"
+        android:id="@+id/text_iv"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        app:layout_constraintEnd_toEndOf="@id/h_50_gl"
+        android:layout_marginEnd="8dp"
+        android:id="@+id/record_cl"
+        android:padding="12dp"
+        app:layout_constraintTop_toTopOf="@id/v_32_gl"
+        app:layout_constraintBottom_toBottomOf="@id/v_46_gl"
+        android:background="@drawable/shape_conner_rect_12"
+        android:layout_height="0dp">
+        
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@mipmap/home_voice"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="16dp"
+            android:text="Record &amp; Change"
+            />
+        
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="8dp"
+            android:layout_height="12dp"
+            android:src="@mipmap/arrow_next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="@id/h_50_gl"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:id="@+id/text_to_audio_cl"
+        android:padding="12dp"
+        app:layout_constraintTop_toTopOf="@id/v_32_gl"
+        app:layout_constraintBottom_toBottomOf="@id/v_50_gl"
+        android:background="@drawable/shape_conner_rect_12"
+        android:layout_height="0dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@mipmap/home_text_voice"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="16dp"
+            android:text="Text to audio"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="8dp"
+            android:layout_height="12dp"
+            android:src="@mipmap/arrow_next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        app:layout_constraintEnd_toEndOf="@id/h_50_gl"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        android:id="@+id/my_file_cl"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/record_cl"
+        app:layout_constraintBottom_toBottomOf="@id/v_65_gl"
+        android:background="@drawable/shape_conner_rect_12"
+        android:layout_height="0dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@mipmap/home_myfile"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="16dp"
+            android:text="My file"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="8dp"
+            android:layout_height="12dp"
+            android:src="@mipmap/arrow_next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="@id/h_50_gl"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:id="@+id/open_file_cl"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/text_to_audio_cl"
+        app:layout_constraintBottom_toBottomOf="@id/v_65_gl"
+        android:background="@drawable/shape_conner_rect_12"
+        android:layout_height="0dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@mipmap/home_open_file"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="16dp"
+            android:text="Open file"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="8dp"
+            android:layout_height="12dp"
+            android:src="@mipmap/arrow_next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/v_65_gl"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:textSize="16sp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:text="Sound List"
+        android:id="@+id/sound_list_tv"
+        />
+    
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="126dp"
+        android:layout_height="95dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sound_list_tv"
+        android:src="@mipmap/home_empty"
+        android:layout_marginTop="32dp"
+        android:visibility="gone"
+        android:id="@+id/empty_iv"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        android:id="@+id/list_rv"
+        app:layout_constraintTop_toBottomOf="@id/sound_list_tv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
