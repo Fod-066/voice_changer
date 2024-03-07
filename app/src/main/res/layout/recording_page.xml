@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@mipmap/recroding_bg"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/v_61_gl"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.61"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/v_71_gl"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.71"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@mipmap/icon_back"
+        android:padding="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="6dp"
+        android:id="@+id/back_iv"
+        />
+
+    <!--<androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Setting"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/back_iv"
+        app:layout_constraintBottom_toBottomOf="@id/back_iv"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        />-->
+    
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00:00"
+        android:textSize="36sp"
+        android:textColor="#fff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="101dp"
+        android:id="@+id/timer_tv"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/info_iv"
+        android:src="@mipmap/icon_info"
+        app:layout_constraintEnd_toStartOf="@id/info_tv"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@id/timer_tv"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#BDBDBD"
+        app:layout_constraintStart_toEndOf="@id/info_iv"
+        android:id="@+id/info_tv"
+        android:text="Record at least 3 seconds."
+        android:textSize="14sp"
+        android:paddingStart="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/info_iv"
+        app:layout_constraintBottom_toBottomOf="@id/info_iv"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@mipmap/recroding_btn"
+        app:layout_constraintTop_toTopOf="@id/v_61_gl"
+        app:layout_constraintBottom_toBottomOf="@id/v_71_gl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/stop_iv"
+        android:visibility="invisible"
+        />
+
+    
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
