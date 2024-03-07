@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/back_iv"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="32dp"
+        android:padding="12dp"
+        android:src="@mipmap/icon_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/play_cl"
+        android:layout_width="0dp"
+        android:layout_height="96dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="96dp"
+        android:background="@mipmap/effect_rect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/voice_bg_iv"
+            android:layout_width="45dp"
+            android:layout_height="21dp"
+            android:src="@mipmap/effect_rect1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/icon_voice_on"
+            app:layout_constraintBottom_toBottomOf="@id/voice_bg_iv"
+            app:layout_constraintEnd_toEndOf="@id/voice_bg_iv"
+            app:layout_constraintStart_toStartOf="@id/voice_bg_iv"
+            app:layout_constraintTop_toTopOf="@id/voice_bg_iv" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/toggle_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="20dp"
+            android:src="@mipmap/icon_resume"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/voice_pb"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="6dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:max="100"
+            android:progressDrawable="@drawable/custom_progress_bar"
+            app:layout_constraintBottom_toBottomOf="@id/toggle_iv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/toggle_iv"
+            app:layout_constraintTop_toTopOf="@id/toggle_iv"
+            tools:progress="50" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/start_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textColor="#fff"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@id/toggle_iv"
+            app:layout_constraintStart_toStartOf="@id/voice_pb" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/end_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textColor="#fff"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@id/toggle_iv"
+            app:layout_constraintEnd_toEndOf="@id/voice_pb" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Voice change"
+        android:textColor="#fff"
+        android:layout_marginTop="16dp"
+        android:id="@+id/voice_change_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/play_cl" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/voice_change_tv"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintBottom_toTopOf="@id/submit_tv"
+        android:layout_marginBottom="16dp"
+        android:id="@+id/effect_rv"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="208dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="46dp"
+        android:background="@drawable/shape_button_conner_25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/submit_tv"
+        android:text="DONE"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
