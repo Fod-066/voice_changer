@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="262dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:background="@mipmap/dialog_bg"
+    android:layout_height="225dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:text="Access Request"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="24dp"
+        android:id="@+id/title_tv"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginHorizontal="16dp"
+        android:text="The application requires read and write SD card and recording permissions before it can be used. Please go to the settings page to complete the settings."
+        android:id="@+id/saving_tv"
+        android:gravity="center"
+        android:visibility="visible"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="107dp"
+        android:layout_height="36dp"
+        android:id="@+id/cancel_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/save_tv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/shape_cancel"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="Cancel"
+        android:textColor="#FFBDBDBD"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="107dp"
+        android:layout_height="36dp"
+        android:id="@+id/save_tv"
+        android:background="@drawable/shape_save"
+        app:layout_constraintStart_toEndOf="@id/cancel_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="Setting"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,6 +11,7 @@ import com.voice.monster.pages.BasePage
 import com.voice.monster.pages.file.FilePage
 import com.voice.monster.pages.recording.RecordingPage
 import com.voice.monster.pages.setting.SettingPage
+import com.voice.monster.pages.tts.TTSPage
 
 class HomePage : BasePage<HomePageBinding>() {
 
@@ -38,6 +39,9 @@ class HomePage : BasePage<HomePageBinding>() {
         putExtra("IsMyFile", false)
       })
     }
+    binding.textToAudioCl.singleClick {
+      startActivity(Intent(this, TTSPage::class.java))
+    }
   }
 
   private fun initPermission() {
@@ -52,7 +56,9 @@ class HomePage : BasePage<HomePageBinding>() {
         if (allGranted) {
           showToast("Permissions all Granted!")
         } else {
-          showToast("These permissions are denied: $deniedList")
+
+//          showToast("These permissions are denied: $deniedList")
+          PermissionDialog(this).show()
         }
       }
   }

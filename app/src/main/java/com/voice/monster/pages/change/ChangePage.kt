@@ -104,6 +104,7 @@ class ChangePage : BasePage<ChangerPageBinding>() {
     isPlaying = false
     binding.startTimeTv.text = currentSeconds.formatMS()
     binding.voicePb.progress = 0
+    binding.toggleIv.setImageResource(R.mipmap.icon_resume)
   }
 
   private fun startTimer() {

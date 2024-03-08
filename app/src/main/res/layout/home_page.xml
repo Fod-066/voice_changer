@@ -249,6 +249,7 @@
         android:textColor="#fff"
         android:textStyle="bold"
         android:text="Sound List"
+        android:visibility="invisible"
         android:id="@+id/sound_list_tv"
         />
     

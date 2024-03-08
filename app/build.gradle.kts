@@ -10,7 +10,7 @@ android {
   compileSdk = 33
 
   defaultConfig {
-    applicationId = "com.tb.vm"
+    applicationId = "com.tb.vm.x"
     minSdk = 24
     targetSdk = 33
     versionCode = 1
@@ -25,7 +25,7 @@ android {
 
   buildTypes {
     release {
-      isMinifyEnabled = false
+      isMinifyEnabled = true
       proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
     }
   }
