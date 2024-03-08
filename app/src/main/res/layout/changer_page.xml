@@ -45,6 +45,18 @@
             app:layout_constraintStart_toStartOf="@id/voice_bg_iv"
             app:layout_constraintTop_toTopOf="@id/voice_bg_iv" />
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/file_name_tv"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="12dp"
+            android:textSize="12sp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/toggle_iv"
             android:layout_width="40dp"
@@ -114,6 +126,32 @@
         app:layout_constraintBottom_toTopOf="@id/submit_tv"
         android:layout_marginBottom="16dp"
         android:id="@+id/effect_rv"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="152dp"
+        android:layout_height="152dp"
+        android:src="@mipmap/img_save_success"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/voice_change_tv"
+        android:layout_marginTop="50dp"
+        android:id="@+id/success_iv"
+        android:visibility="invisible"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sound file saved successfully."
+        android:textColor="#FFB8B8B8"
+        android:textSize="14sp"
+        android:id="@+id/success_tv"
+        app:layout_constraintStart_toStartOf="@id/success_iv"
+        app:layout_constraintEnd_toEndOf="@id/success_iv"
+        app:layout_constraintTop_toBottomOf="@id/success_iv"
+        android:layout_marginTop="12dp"
+        android:visibility="invisible"
         />
 
     <androidx.appcompat.widget.AppCompatTextView
