@@ -46,7 +46,7 @@ fun Context.getModFilePath(fileName: String): String {
   val suffix = ".wav"
 
   val file =
-    File(this.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)?.absolutePath + "/Record")
+    File(this.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)?.absolutePath + "/Mod")
   if (!file.exists()) {
     file.mkdirs()
   }

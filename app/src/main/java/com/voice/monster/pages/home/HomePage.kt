@@ -8,6 +8,7 @@ import com.voice.monster.databinding.HomePageBinding
 import com.voice.monster.ext.showToast
 import com.voice.monster.ext.singleClick
 import com.voice.monster.pages.BasePage
+import com.voice.monster.pages.file.FilePage
 import com.voice.monster.pages.recording.RecordingPage
 import com.voice.monster.pages.setting.SettingPage
 
@@ -28,6 +29,14 @@ class HomePage : BasePage<HomePageBinding>() {
         return@singleClick
       }
       startActivity(Intent(this, RecordingPage::class.java))
+    }
+    binding.myFileCl.singleClick {
+      startActivity(Intent(this, FilePage::class.java))
+    }
+    binding.openFileCl.singleClick {
+      startActivity(Intent(this, FilePage::class.java).apply {
+        putExtra("IsMyFile", false)
+      })
     }
   }
 

@@ -28,6 +28,7 @@
         android:textColor="#fff"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:id="@+id/title_tv"
         />
     
     <androidx.appcompat.widget.AppCompatImageView
@@ -55,6 +56,18 @@
         android:gravity="center"
         android:textStyle="bold"
         android:textSize="20sp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_tv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/file_rv"
+        android:paddingVertical="16dp"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
